@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Municipal Urban Planning Departments Forum — connecting planners across Saudi Arabia." />
+  <title>Municipal Urban Planning Departments Forum</title>
+  <link rel="icon" type="image/png" href="forum-icon-option-1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet" />
+  <style>
+    :root {
+      --green-950: #082f22;
+      --green-900: #0c3d2b;
+      --green-800: #145237;
+      --green-700: #1f6a47;
+      --green-100: #e8f0ea;
+      --cream: #f7f5ef;
+      --gold: #d9c776;
+      --ink: #142019;
+      --muted: #5d675f;
+      --line: #dfe4df;
+      --white: #fff;
+      --shadow: 0 18px 48px rgb(6 37 25 / 14%);
+      --radius: 8px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: "DM Sans", "Noto Sans Arabic", system-ui, sans-serif;
+      line-height: 1.55;
+    }
+    body[dir="rtl"] { font-family: "Noto Sans Arabic", "DM Sans", sans-serif; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: var(--green-700);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--gold); }
+
+    .site-header { position: relative; z-index: 20; background: rgb(255 255 255 / 96%); }
+    .topbar {
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 13px; min-width: 280px; }
+    .brand-mark {
+      width: 52px;
+      height: 58px;
+      display: inline-block;
+      flex: 0 0 52px;
+      color: var(--green-800);
+      background: currentColor;
+      -webkit-mask: url("forum-icon-option-1.png") center / contain no-repeat;
+      mask: url("forum-icon-option-1.png") center / contain no-repeat;
+    }
+    .brand-copy { line-height: 1.22; }
+    .brand-copy .ar { display: block; font: 600 .76rem "Noto Sans Arabic", sans-serif; }
+    .brand-copy .en { display: block; margin-top: 3px; font-size: .86rem; font-weight: 700; }
+    .header-tools { display: flex; align-items: center; gap: 12px; }
+    .language-button, .menu-button {
+      border: 0;
+      background: transparent;
+      color: var(--green-900);
+      cursor: pointer;
+      font-size: .78rem;
+      font-weight: 700;
+      padding: 10px;
+    }
+    .menu-button { display: none; font-size: 1.35rem; }
+    .main-nav { border-top: 1px solid #eef1ee; border-bottom: 1px solid var(--line); }
+    .main-nav ul {
+      display: flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(15px, 2.4vw, 34px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #233229;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+    .main-nav a { position: relative; display: block; padding: 18px 0 15px; }
+    .main-nav a::after {
+      position: absolute;
+      right: 50%;
+      bottom: 10px;
+      left: 50%;
+      height: 2px;
+      content: "";
+      background: var(--green-700);
+      transition: .25s ease;
+    }
+    .main-nav a:hover::after, .main-nav a:focus-visible::after { right: 0; left: 0; }
+
+    .hero {
+      position: relative;
+      min-height: 560px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgb(5 24 17 / 87%) 0%, rgb(5 24 17 / 64%) 43%, rgb(5 24 17 / 16%) 78%),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=88") center 58% / cover;
+    }
+    .hero::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background: linear-gradient(0deg, rgb(3 28 18 / 36%), transparent 48%);
+    }
+    .hero-content { width: min(620px, 92%); padding: 88px 0 96px; }
+    .hero .eyebrow { color: #e8dc9a; }
+    .hero h1 {
+      max-width: 670px;
+      margin: 0 0 24px;
+      font-size: clamp(2.75rem, 5.5vw, 5.4rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+    .hero p { max-width: 560px; margin: 0 0 34px; color: rgb(255 255 255 / 88%); font-size: 1.04rem; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 13px; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background: var(--green-700);
+      color: var(--white);
+      font-size: .84rem;
+      font-weight: 700;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--green-800); }
+    .button.secondary { border-color: rgb(255 255 255 / 58%); background: rgb(255 255 255 / 5%); backdrop-filter: blur(4px); }
+    .button.secondary:hover { background: var(--white); color: var(--green-900); }
+    .arrow { font-size: 1.15rem; }
+
+    .value-strip { background: linear-gradient(110deg, var(--green-900), #0f4b33); color: white; }
+    .values { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .value {
+      min-height: 178px;
+      padding: 34px 30px;
+      text-align: center;
+      border-inline-end: 1px solid rgb(255 255 255 / 14%);
+    }
+    .value:last-child { border-inline-end: 0; }
+    .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+    .value-icon { display: block; margin-bottom: 11px; color: var(--gold); font-size: 1.8rem; line-height: 1; }
+    .value h3 { margin: 0 0 8px; font-size: .95rem; }
+    .value p { margin: 0; color: rgb(255 255 255 / 72%); font-size: .76rem; }
+
+    .forum-section { position: relative; overflow: hidden; background: var(--cream); }
+    .forum-section::after {
+      position: absolute;
+      right: -90px;
+      bottom: -155px;
+      width: 430px;
+      height: 300px;
+      content: "";
+      opacity: .08;
+      border: 2px solid var(--green-700);
+      border-radius: 50% 50% 0 0;
+      box-shadow: -85px -30px 0 -30px transparent, -85px -30px 0 -28px var(--green-700);
+    }
+    .forum-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: 72px; align-items: center; padding: 88px 0; }
+    .section-title { margin: 0 0 18px; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.06; letter-spacing: -.04em; }
+    .section-copy { max-width: 580px; margin: 0 0 28px; color: var(--muted); }
+    .event-card { padding: 32px; border: 1px solid #d8ddd7; border-radius: var(--radius); background: rgb(255 255 255 / 86%); box-shadow: var(--shadow); }
+    .event-row { display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; padding: 13px 0; border-bottom: 1px solid #edf0ed; }
+    .event-row:last-child { border-bottom: 0; }
+    .event-symbol { display: grid; width: 34px; height: 34px; place-items: center; color: var(--green-700); border: 1px solid #d9e0da; border-radius: 50%; }
+    .event-row strong { display: block; margin-bottom: 2px; font-size: .83rem; }
+    .event-row span { color: var(--muted); font-size: .8rem; }
+
+    .explore { padding: 82px 0 94px; }
+    .explore-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
+    .explore-head .section-title { margin: 0; font-size: clamp(2rem, 3.5vw, 3rem); }
+    .explore-head p { max-width: 470px; margin: 0; color: var(--muted); }
+    .explore-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); gap: 14px; }
+    .explore-card {
+      min-height: 218px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .explore-card:hover { transform: translateY(-5px); border-color: #b7c9bc; box-shadow: 0 14px 34px rgb(12 61 43 / 10%); }
+    .explore-icon { display: grid; width: 42px; height: 42px; place-items: center; margin-bottom: 36px; color: var(--green-700); border-radius: 50%; background: var(--green-100); font-size: 1.15rem; }
+    .explore-card h3 { margin: auto 0 8px; font-size: .92rem; }
+    .explore-card p { margin: 0; color: var(--muted); font-size: .75rem; }
+
+    .site-footer { padding: 58px 0 28px; color: rgb(255 255 255 / 78%); background: var(--green-950); }
+    .footer-grid { display: grid; grid-template-columns: 1.7fr .8fr 1.1fr; gap: 70px; }
+    .footer-logo-row { display: flex; align-items: center; gap: 15px; margin-bottom: 18px; }
+    .footer-logo-row .brand-mark { color: var(--gold); }
+    .footer-brand { color: var(--white); }
+    .footer-note { max-width: 390px; margin: 0; font-size: .8rem; }
+    .footer-title { margin: 0 0 17px; color: var(--white); font-size: .85rem; }
+    .footer-links { display: grid; grid-template-columns: repeat(2, max-content); gap: 8px 28px; font-size: .78rem; }
+    .subscribe { display: flex; padding: 4px; border: 1px solid rgb(255 255 255 / 24%); border-radius: 3px; }
+    .subscribe input { min-width: 0; flex: 1; padding: 10px; border: 0; outline: 0; color: white; background: transparent; }
+    .subscribe input::placeholder { color: rgb(255 255 255 / 52%); }
+    .subscribe button { width: 42px; border: 0; border-radius: 2px; color: var(--green-950); background: var(--cream); cursor: pointer; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 24px; margin-top: 50px; padding-top: 22px; border-top: 1px solid rgb(255 255 255 / 12%); font-size: .7rem; }
+
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    @media (max-width: 920px) {
+      .menu-button { display: inline-block; }
+      .main-nav { display: none; position: absolute; inset: 96px 0 auto; background: white; box-shadow: var(--shadow); }
+      .main-nav.open { display: block; }
+      .main-nav ul { display: grid; gap: 0; padding: 12px 24px 22px; }
+      .main-nav a { padding: 11px 0; }
+      .hero { min-height: 520px; }
+      .values { grid-template-columns: repeat(2, 1fr); }
+      .value:nth-child(2) { border-inline-end: 0; }
+      .value:nth-child(-n+2) { border-bottom: 1px solid rgb(255 255 255 / 14%); }
+      .forum-grid { grid-template-columns: 1fr; gap: 38px; }
+      .explore-grid { grid-template-columns: repeat(2, 1fr); }
+      .explore-card:last-child { grid-column: 1 / -1; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :last-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 30px, var(--max)); }
+      .topbar { min-height: 82px; }
+      .brand { min-width: 0; }
+      .brand-mark { width: 42px; height: 48px; flex-basis: 42px; transform: scale(.82); transform-origin: left center; }
+      .brand-copy .ar { display: none; }
+      .brand-copy .en { max-width: 170px; font-size: .72rem; }
+      .main-nav { inset-block-start: 82px; }
+      .hero-content { padding: 72px 0; }
+      .hero h1 { font-size: clamp(2.5rem, 12vw, 3.7rem); }
+      .values { grid-template-columns: 1fr; }
+      .value { min-height: auto; border-inline-end: 0; border-bottom: 1px solid rgb(255 255 255 / 14%); }
+      .value:last-child { border-bottom: 0; }
+      .forum-grid { padding: 68px 0; }
+      .event-card { padding: 21px; }
+      .explore-head { display: block; }
+      .explore-head p { margin-top: 15px; }
+      .explore-grid { grid-template-columns: 1fr; }
+      .explore-card:last-child { grid-column: auto; }
+      .explore-card { min-height: 185px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 38px; }
+      .footer-grid > :last-child { grid-column: auto; }
+      .footer-bottom { display: block; }
+      .footer-bottom span { display: block; margin-top: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="#top" aria-label="Municipal Urban Planning Departments Forum home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <span class="ar" lang="ar" dir="rtl">منتدى إدارات التخطيط العمراني</span>
+          <span class="en" data-i18n="brand">Municipal Urban Planning<br />Departments Forum</span>
+        </span>
+      </a>
+      <div class="header-tools">
+        <button class="language-button" type="button" id="languageToggle" aria-label="Switch language">العربية</button>
+        <button class="menu-button" type="button" id="menuToggle" aria-controls="mainNavigation" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <nav class="main-nav" id="mainNavigation" aria-label="Main navigation">
+      <ul class="container">
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#forum" data-i18n="navCurrent">This Year’s Forum</a></li>
+        <li><a href="#explore" data-i18n="navPrevious">Previous Forums</a></li>
+        <li><a href="#explore" data-i18n="navDiscussions">Discussions</a></li>
+        <li><a href="#explore" data-i18n="navEvents">Side Events</a></li>
+        <li><a href="library.html" data-i18n="navLibrary">Library</a></li>
+        <li><a href="news.html" data-i18n="navNews">News</a></li>
+        <li><a href="insights.html" data-i18n="navInsights">Insights</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="about" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow" data-i18n="heroEyebrow">Saudi Arabia · 2026</span>
+          <h1 id="hero-title" data-i18n="heroTitle">Shaping Better Cities for a Sustainable Future</h1>
+          <p data-i18n="heroCopy">The Municipal Urban Planning Departments Forum brings together planning leaders from across Saudi Arabia to share knowledge, exchange experiences, and advance the future of our cities.</p>
+          <div class="button-row">
+            <a class="button" href="#forum"><span data-i18n="heroPrimary">This Year’s Forum</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="button secondary" href="#about"><span data-i18n="heroSecondary">Learn More</span><span class="arrow" aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-strip" aria-label="Forum values">
+      <div class="container values">
+        <article class="value"><span class="value-icon material-symbols-outlined" aria-hidden="true">groups</span><h3 data-i18n="connectTitle">Connect</h3><p data-i18n="connectCopy">Build networks with planning professionals from across the Kingdom.</p></article>
+        <article class="value"><span class="value-icon material-symbols-outlined" aria-hidden="true">forum</span><h3 data-i18n="exchangeTitle">Exchange</h3><p data-i18n="exchangeCopy">Share experiences and discuss solutions to urban planning challenges.</p></article>
+        <article class="value"><span class="value-icon material-symbols-outlined" aria-hidden="true">lightbulb</span><h3 data-i18n="inspireTitle">Inspire</h3><p data-i18n="inspireCopy">Explore innovative ideas and best practices for sustainable cities.</p></article>
+        <article class="value"><span class="value-icon material-symbols-outlined" aria-hidden="true">monitoring</span><h3 data-i18n="advanceTitle">Advance</h3><p data-i18n="advanceCopy">Contribute to the development of urban planning practices in Saudi Arabia.</p></article>
+      </div>
+    </section>
+
+    <section class="forum-section" id="forum" aria-labelledby="forum-title">
+      <div class="container forum-grid">
+        <div>
+          <span class="eyebrow" data-i18n="forumEyebrow">The annual gathering</span>
+          <h2 class="section-title" id="forum-title" data-i18n="forumTitle">This Year’s Forum</h2>
+          <p class="section-copy" data-i18n="forumCopy">Join municipal planning departments to discuss key issues, explore practical solutions, and shape the next chapter of urban development across the Kingdom.</p>
+          <a class="button" href="#explore"><span data-i18n="discover">Discover More</span><span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <aside class="event-card" aria-label="Forum details">
+          <div class="event-row"><span class="event-symbol material-symbols-outlined" aria-hidden="true">calendar_month</span><div><strong data-i18n="dateLabel">Date</strong><span data-i18n="dateValue">16–18 December 2026</span></div></div>
+          <div class="event-row"><span class="event-symbol material-symbols-outlined" aria-hidden="true">location_on</span><div><strong data-i18n="locationLabel">Location</strong><span data-i18n="locationValue">Riyadh, Saudi Arabia</span></div></div>
+          <div class="event-row"><span class="event-symbol material-symbols-outlined" aria-hidden="true">account_tree</span><div><strong data-i18n="themeLabel">Theme</strong><span data-i18n="themeValue">Sustainable Growth, Better Livability</span></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="explore" id="explore" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="explore-head">
+          <h2 class="section-title" id="explore-title" data-i18n="exploreTitle">Explore the Forum</h2>
+          <p data-i18n="exploreCopy">Access conversations, events, knowledge, and the people shaping better urban futures.</p>
+        </div>
+        <div class="explore-grid">
+          <a class="explore-card" href="#"><span class="explore-icon material-symbols-outlined" aria-hidden="true">history</span><h3 data-i18n="cardPrevious">Previous Forums</h3><p data-i18n="cardPreviousCopy">See past events and key outcomes.</p></a>
+          <a class="explore-card" href="#"><span class="explore-icon material-symbols-outlined" aria-hidden="true">forum</span><h3 data-i18n="cardDiscussions">Discussions</h3><p data-i18n="cardDiscussionsCopy">Join conversations and share insights.</p></a>
+          <a class="explore-card" href="#"><span class="explore-icon material-symbols-outlined" aria-hidden="true">event</span><h3 data-i18n="cardEvents">Side Events</h3><p data-i18n="cardEventsCopy">Discover workshops and partner events.</p></a>
+          <a class="explore-card" href="library.html"><span class="explore-icon material-symbols-outlined" aria-hidden="true">local_library</span><h3 data-i18n="cardLibrary">Library</h3><p data-i18n="cardLibraryCopy">Reports, publications, and standardized municipal project summaries.</p></a>
+          <a class="explore-card" href="news.html"><span class="explore-icon material-symbols-outlined" aria-hidden="true">newspaper</span><h3 data-i18n="cardNews">News</h3><p data-i18n="cardNewsCopy">Forum announcements and municipal planning updates.</p></a>
+          <a class="explore-card" href="insights.html"><span class="explore-icon material-symbols-outlined" aria-hidden="true">insights</span><h3 data-i18n="cardInsights">Insights</h3><p data-i18n="cardInsightsCopy">Weekly AI-assisted lessons drawn from Library materials.</p></a>
+          <a class="explore-card" href="#about"><span class="explore-icon material-symbols-outlined" aria-hidden="true">info</span><h3 data-i18n="cardAbout">About</h3><p data-i18n="cardAboutCopy">Learn about the Forum and its mission.</p></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div class="brand-copy footer-brand"><span class="ar" lang="ar" dir="rtl">منتدى إدارات التخطيط العمراني</span><span class="en">Municipal Urban Planning Departments Forum</span></div>
+        </div>
+        <p class="footer-note" data-i18n="footerNote">A collaborative platform for municipal planning departments in Saudi Arabia to connect, collaborate, and create better cities for future generations.</p>
+      </div>
+      <div>
+        <h2 class="footer-title" data-i18n="quickLinks">Quick Links</h2>
+        <nav class="footer-links" aria-label="Footer navigation"><a href="#forum" data-i18n="navCurrent">This Year’s Forum</a><a href="#explore" data-i18n="navEvents">Side Events</a><a href="library.html" data-i18n="navLibrary">Library</a><a href="news.html" data-i18n="navNews">News</a><a href="insights.html" data-i18n="navInsights">Insights</a><a href="#about" data-i18n="navAbout">About</a></nav>
+      </div>
+      <div>
+        <h2 class="footer-title" data-i18n="stayUpdated">Stay Updated</h2>
+        <form class="subscribe" id="subscribeForm"><input type="email" required aria-label="Email address" placeholder="Email address" data-placeholder-en="Email address" data-placeholder-ar="البريد الإلكتروني" /><button type="submit" aria-label="Subscribe">→</button></form>
+      </div>
+    </div>
+    <div class="container footer-bottom"><small>© 2026 Municipal Urban Planning Departments Forum</small><span data-i18n="footerLegal">Privacy · Accessibility · Terms</span></div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('#menuToggle');
+    const navigation = document.querySelector('#mainNavigation');
+    menuButton.addEventListener('click', () => {
+      const open = navigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.textContent = open ? '×' : '☰';
+    });
+
+    navigation.addEventListener('click', (event) => {
+      if (event.target.matches('a')) {
+        navigation.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = '☰';
+      }
+    });
+
+    const translations = {
+      ar: {
+        brand: 'منتدى إدارات التخطيط العمراني', navAbout: 'عن المنتدى', navCurrent: 'منتدى هذا العام', navPrevious: 'المنتديات السابقة', navDiscussions: 'النقاشات', navEvents: 'الفعاليات المصاحبة', navLibrary: 'المكتبة', navNews: 'الأخبار', navInsights: 'رؤى',
+        heroEyebrow: 'المملكة العربية السعودية · 2026', heroTitle: 'نصنع مدناً أفضل لمستقبل مستدام', heroCopy: 'يجمع منتدى إدارات التخطيط العمراني قيادات التخطيط من مختلف مناطق المملكة لتبادل المعرفة والخبرات ودعم مستقبل مدننا.', heroPrimary: 'منتدى هذا العام', heroSecondary: 'اعرف المزيد',
+        connectTitle: 'تواصل', connectCopy: 'ابنِ شبكة علاقات مع خبراء التخطيط من مختلف أنحاء المملكة.', exchangeTitle: 'تبادل', exchangeCopy: 'شارك الخبرات وناقش حلول تحديات التخطيط العمراني.', inspireTitle: 'إلهام', inspireCopy: 'استكشف الأفكار المبتكرة وأفضل ممارسات المدن المستدامة.', advanceTitle: 'تقدم', advanceCopy: 'ساهم في تطوير ممارسات التخطيط العمراني في المملكة.',
+        forumEyebrow: 'اللقاء السنوي', forumTitle: 'منتدى هذا العام', forumCopy: 'انضم إلى إدارات التخطيط البلدية لمناقشة القضايا المهمة واستكشاف الحلول العملية وصياغة المرحلة القادمة من التنمية العمرانية.', discover: 'اكتشف المزيد', dateLabel: 'التاريخ', dateValue: '16–18 ديسمبر 2026', locationLabel: 'الموقع', locationValue: 'الرياض، المملكة العربية السعودية', themeLabel: 'الموضوع', themeValue: 'نمو مستدام، جودة حياة أفضل',
+        exploreTitle: 'استكشف المنتدى', exploreCopy: 'اكتشف النقاشات والفعاليات والمعرفة والأشخاص الذين يصنعون مستقبلاً عمرانياً أفضل.', cardPrevious: 'المنتديات السابقة', cardPreviousCopy: 'اطّلع على الفعاليات السابقة وأبرز النتائج.', cardDiscussions: 'النقاشات', cardDiscussionsCopy: 'انضم إلى الحوارات وشارك رؤيتك.', cardEvents: 'الفعاليات المصاحبة', cardEventsCopy: 'اكتشف ورش العمل وفعاليات الشركاء.', cardLibrary: 'المكتبة', cardLibraryCopy: 'تقارير ومنشورات وملخصات موحدة لمشروعات البلديات.', cardNews: 'الأخبار', cardNewsCopy: 'إعلانات المنتدى ومستجدات التخطيط البلدي.', cardInsights: 'رؤى', cardInsightsCopy: 'دروس أسبوعية بمساعدة الذكاء الاصطناعي من مواد المكتبة.', cardAbout: 'عن المنتدى', cardAboutCopy: 'تعرّف على المنتدى ورسالته.',
+        footerNote: 'منصة تعاونية لإدارات التخطيط البلدية في المملكة للتواصل والعمل المشترك وصناعة مدن أفضل للأجيال القادمة.', quickLinks: 'روابط سريعة', stayUpdated: 'ابقَ على اطلاع', footerLegal: 'الخصوصية · إمكانية الوصول · الشروط'
+      }
+    };
+
+    const englishText = new Map([...document.querySelectorAll('[data-i18n]')].map((element) => [element, element.textContent]));
+    const languageButton = document.querySelector('#languageToggle');
+    let language = 'en';
+    languageButton.addEventListener('click', () => {
+      language = language === 'en' ? 'ar' : 'en';
+      document.documentElement.lang = language;
+      document.body.dir = language === 'ar' ? 'rtl' : 'ltr';
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        element.textContent = language === 'ar' ? translations.ar[key] : englishText.get(element);
+      });
+      const email = document.querySelector('.subscribe input');
+      email.placeholder = language === 'ar' ? email.dataset.placeholderAr : email.dataset.placeholderEn;
+      languageButton.textContent = language === 'ar' ? 'EN' : 'العربية';
+    });
+
+    document.querySelector('#subscribeForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const button = event.currentTarget.querySelector('button');
+      button.textContent = '✓';
+      button.setAttribute('aria-label', 'Subscribed');
+    });
+  </script>
+</body>
+</html>

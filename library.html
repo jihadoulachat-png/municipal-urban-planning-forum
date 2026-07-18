@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Reports, publications, and standardized municipal urban planning project summaries from across Saudi Arabia." />
+  <title>Library | Municipal Urban Planning Departments Forum</title>
+  <link rel="icon" type="image/png" href="forum-icon-option-1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="forum-pages.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="index.html" aria-label="Forum home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy"><span class="ar" lang="ar" dir="rtl">منتدى إدارات التخطيط العمراني</span><span class="en">Municipal Urban Planning<br />Departments Forum</span></span>
+      </a>
+      <div class="header-tools"><button class="language-button" id="languageToggle" type="button" aria-label="Switch language">العربية</button><button class="menu-button" id="menuToggle" type="button" aria-controls="mainNavigation" aria-expanded="false" aria-label="Open menu">☰</button></div>
+    </div>
+    <nav class="main-nav" id="mainNavigation" aria-label="Main navigation">
+      <ul class="container">
+        <li><a href="index.html" data-ar="الرئيسية">Home</a></li>
+        <li><a href="index.html#forum" data-ar="منتدى هذا العام">This Year’s Forum</a></li>
+        <li><a href="index.html#explore" data-ar="النقاشات">Discussions</a></li>
+        <li><a class="active" href="library.html" data-ar="المكتبة">Library</a></li>
+        <li><a href="news.html" data-ar="الأخبار">News</a></li>
+        <li><a href="insights.html" data-ar="رؤى">Insights</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumbs"><a href="index.html">Home</a><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Library</span></div>
+        <div class="hero-grid">
+          <div><span class="eyebrow" data-ar="قاعدة المعرفة الوطنية">National knowledge base</span><h1 data-ar="المكتبة">Library</h1><p data-ar="تقارير ومنشورات وملخصات موحدة لمشروعات التخطيط العمراني مقدمة من البلديات في جميع أنحاء المملكة العربية السعودية.">Reports, publications, and standardized urban planning project summaries submitted by municipalities across Saudi Arabia.</p></div>
+          <aside class="hero-stat"><strong>148</strong><span>resources from 32 municipalities</span></aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar-inner">
+        <label class="field-wrap"><span class="material-symbols-outlined" aria-hidden="true">search</span><input id="projectSearch" type="search" placeholder="Search projects, municipalities, or topics" aria-label="Search the Library" /></label>
+        <select id="regionFilter" aria-label="Filter by region"><option value="all">All regions</option><option value="riyadh">Riyadh</option><option value="makkah">Makkah</option><option value="madinah">Madinah</option><option value="eastern">Eastern Province</option></select>
+        <select id="themeFilter" aria-label="Filter by theme"><option value="all">All themes</option><option value="mobility">Mobility</option><option value="public-space">Public space</option><option value="regeneration">Urban regeneration</option><option value="resilience">Resilience</option></select>
+        <button class="button" id="submissionToggle" type="button" aria-controls="submissionPanel" aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">add_notes</span>Submit a project</button>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head"><div><span class="section-kicker">Municipal project archive</span><h2 class="section-title" id="projects-title">Standardized project summaries</h2></div><p>Each record follows one shared format so municipalities can compare objectives, delivery methods, outcomes, and lessons learned.</p></div>
+        <p class="results-count" id="resultsCount">6 standardized project summaries</p>
+        <div class="project-grid">
+          <article class="project-card" data-region="riyadh" data-theme="mobility"><div class="project-cover riyadh"><span class="material-symbols-outlined" aria-hidden="true">directions_walk</span></div><div class="project-body"><div class="tag-row"><span class="tag">Riyadh</span><span class="tag gold">Mobility</span></div><h3>Complete Streets Programme: Olaya District</h3><p>Rebalancing a central corridor around walking, transit access, shade, and safer crossings.</p><div class="project-meta"><span><span class="material-symbols-outlined">account_balance</span>Riyadh Municipality</span><span><span class="material-symbols-outlined">calendar_month</span>2023–2026 · Implementation</span></div><a class="card-link" href="#">View standardized summary <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
+          <article class="project-card" data-region="makkah" data-theme="public-space"><div class="project-cover jeddah"><span class="material-symbols-outlined" aria-hidden="true">water</span></div><div class="project-body"><div class="tag-row"><span class="tag">Jeddah</span><span class="tag gold">Public space</span></div><h3>Waterfront Public Realm Renewal</h3><p>A phased approach to inclusive recreation, climate comfort, and year-round waterfront access.</p><div class="project-meta"><span><span class="material-symbols-outlined">account_balance</span>Jeddah Municipality</span><span><span class="material-symbols-outlined">calendar_month</span>2022–2026 · Completed</span></div><a class="card-link" href="#">View standardized summary <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
+          <article class="project-card" data-region="madinah" data-theme="regeneration"><div class="project-cover madinah"><span class="material-symbols-outlined" aria-hidden="true">mosque</span></div><div class="project-body"><div class="tag-row"><span class="tag">Madinah</span><span class="tag gold">Regeneration</span></div><h3>Historic Neighbourhood Revitalisation</h3><p>Heritage-sensitive upgrades connecting public spaces, local commerce, and community services.</p><div class="project-meta"><span><span class="material-symbols-outlined">account_balance</span>Madinah Municipality</span><span><span class="material-symbols-outlined">calendar_month</span>2024–2027 · Implementation</span></div><a class="card-link" href="#">View standardized summary <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
+          <article class="project-card" data-region="eastern" data-theme="resilience"><div class="project-cover"><span class="material-symbols-outlined" aria-hidden="true">park</span></div><div class="project-body"><div class="tag-row"><span class="tag">Dammam</span><span class="tag gold">Resilience</span></div><h3>Neighbourhood Green Corridors</h3><p>Linking parks and civic destinations through shaded routes and water-sensitive landscaping.</p><div class="project-meta"><span><span class="material-symbols-outlined">account_balance</span>Eastern Province Municipality</span><span><span class="material-symbols-outlined">calendar_month</span>2026–2028 · Planning</span></div><a class="card-link" href="#">View standardized summary <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
+          <article class="project-card" data-region="riyadh" data-theme="public-space"><div class="project-cover riyadh"><span class="material-symbols-outlined" aria-hidden="true">family_restroom</span></div><div class="project-body"><div class="tag-row"><span class="tag">Al Kharj</span><span class="tag gold">Public space</span></div><h3>Community Park Network</h3><p>A municipal framework for accessible parks within a ten-minute walk of residential areas.</p><div class="project-meta"><span><span class="material-symbols-outlined">account_balance</span>Al Kharj Municipality</span><span><span class="material-symbols-outlined">calendar_month</span>2024–2026 · Implementation</span></div><a class="card-link" href="#">View standardized summary <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
+          <article class="project-card" data-region="makkah" data-theme="mobility"><div class="project-cover jeddah"><span class="material-symbols-outlined" aria-hidden="true">directions_bus</span></div><div class="project-body"><div class="tag-row"><span class="tag">Makkah</span><span class="tag gold">Mobility</span></div><h3>Seasonal Mobility Management Plan</h3><p>Data-led street and transit operations for safe, legible movement during peak visitor periods.</p><div class="project-meta"><span><span class="material-symbols-outlined">account_balance</span>Holy Makkah Municipality</span><span><span class="material-symbols-outlined">calendar_month</span>2023–2026 · Active</span></div><a class="card-link" href="#">View standardized summary <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
+        </div>
+        <div class="empty-state" id="emptyState"><span class="material-symbols-outlined">search_off</span>No project summaries match these filters.</div>
+
+        <section class="form-panel" id="submissionPanel" aria-labelledby="submission-title">
+          <h3 id="submission-title">Municipal project summary form</h3><p>Create a standardized draft for review before it is archived in the Library.</p>
+          <form id="projectSubmission">
+            <div class="form-grid">
+              <div class="form-field"><label for="municipality">Municipality</label><input id="municipality" required placeholder="e.g. Riyadh Municipality" /></div>
+              <div class="form-field"><label for="projectTitle">Project title</label><input id="projectTitle" required placeholder="Official project name" /></div>
+              <div class="form-field"><label for="projectRegion">Region</label><select id="projectRegion" required><option value="">Select region</option><option>Riyadh</option><option>Makkah</option><option>Madinah</option><option>Eastern Province</option></select></div>
+              <div class="form-field"><label for="projectTheme">Primary theme</label><select id="projectTheme" required><option value="">Select theme</option><option>Mobility</option><option>Public space</option><option>Urban regeneration</option><option>Resilience</option></select></div>
+              <div class="form-field full"><label for="challenge">Planning challenge</label><textarea id="challenge" required placeholder="Describe the context and problem the project responds to."></textarea></div>
+              <div class="form-field full"><label for="approach">Approach and delivery model</label><textarea id="approach" required placeholder="Summarize the planning approach, stakeholders, phases, and tools used."></textarea></div>
+              <div class="form-field"><label for="outcomes">Measured outcomes</label><textarea id="outcomes" required placeholder="List indicators and results."></textarea></div>
+              <div class="form-field"><label for="lessons">Lessons learned</label><textarea id="lessons" required placeholder="What should other municipalities know?"></textarea></div>
+            </div>
+            <div class="form-actions"><button class="button secondary" type="reset">Clear</button><button class="button" type="submit"><span class="material-symbols-outlined">save</span>Save draft</button></div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="section cream">
+      <div class="container"><div class="section-head"><div><span class="section-kicker">One shared format</span><h2 class="section-title">What every summary captures</h2></div><p>The form turns individual project experience into comparable, reusable knowledge.</p></div><div class="standards-grid"><article class="standard-card"><span class="material-symbols-outlined">problem</span><h3>Challenge and context</h3><p>The local need, baseline conditions, objectives, and affected communities.</p></article><article class="standard-card"><span class="material-symbols-outlined">schema</span><h3>Approach and delivery</h3><p>Planning methods, partnerships, governance, phasing, and resources.</p></article><article class="standard-card"><span class="material-symbols-outlined">monitoring</span><h3>Outcomes and evidence</h3><p>Measured results, indicators, evaluation methods, and supporting material.</p></article><article class="standard-card"><span class="material-symbols-outlined">lightbulb</span><h3>Lessons and transferability</h3><p>What worked, what changed, and what other municipalities can reuse.</p></article></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><div class="footer-logo-row"><span class="brand-mark" aria-hidden="true"></span><div class="brand-copy footer-brand"><span class="ar" lang="ar" dir="rtl">منتدى إدارات التخطيط العمراني</span><span class="en">Municipal Urban Planning Departments Forum</span></div></div><p class="footer-note">A collaborative knowledge platform for municipal planning departments across Saudi Arabia.</p></div><div><h2 class="footer-title">Explore</h2><nav class="footer-links"><a href="library.html">Library</a><a href="news.html">News</a><a href="insights.html">Insights</a><a href="index.html#forum">Forum 2026</a></nav></div><div><h2 class="footer-title">Stay Updated</h2><form class="subscribe"><input type="email" required aria-label="Email address" placeholder="Email address" /><button type="submit" aria-label="Subscribe">→</button></form></div></div><div class="container footer-bottom"><small>© 2026 Municipal Urban Planning Departments Forum</small><span>Privacy · Accessibility · Terms</span></div></footer>
+  <script src="forum-pages.js"></script>
+</body>
+</html>
